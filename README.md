@@ -7,7 +7,7 @@ macOS Big Sur 11.1
 ## Downloads
 To get started please run:
 ```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/AkkeyLab/mac-auto-setup/master/download.sh)"
+sh -c "$(https://raw.githubusercontent.com/b1017034/mac-auto-setup/master/download.sh)"
 ```
 
 ## Installation
