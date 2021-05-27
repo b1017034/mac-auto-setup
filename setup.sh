@@ -120,7 +120,7 @@ fi
 #
 # Install pyenv
 #
-if ! command_exists goenv ; then
+if ! command_exists pyenv ; then
   echo " ----------- Python ------------"
   brew install pyenv
   pyenv --version
@@ -135,7 +135,7 @@ fi
 #
 # Install pyenv
 #
-if ! command_exists goenv ; then
+if ! command_exists jenv ; then
   echo " ----------- Java ------------"
   brew install jenv
   jenv --version
