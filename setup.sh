@@ -86,7 +86,7 @@ git clone https://github.com/powerline/fonts.git ~/fonts
 echo " ------------ END ------------"
 
 #
-# Install ruby
+# Install rbenv
 #
 if ! command_exists rbenv ; then
   echo " ----------- Ruby ------------"
@@ -99,6 +99,50 @@ if ! command_exists rbenv ; then
   rbenv global $ruby_latest
   rbenv rehash
   ruby -v
+  echo " ------------ END ------------"
+fi
+
+#
+# Install goenv
+#
+if ! command_exists goenv ; then
+  echo " ----------- Go ------------"
+  brew install goenv
+  goenv --version
+  goenv install -l
+  go_latest=$(goenv install -l | grep -v '[a-z]' | tail -1 | sed 's/ //g')
+  goenv install $go_latest
+  goenv global $go_latest
+  go version
+  echo " ------------ END ------------"
+fi
+
+#
+# Install pyenv
+#
+if ! command_exists goenv ; then
+  echo " ----------- Python ------------"
+  brew install pyenv
+  pyenv --version
+  pyenv install -l
+  python_latest=$(pyenv install -l | grep -v '[a-z]' | tail -1 | sed 's/ //g')
+  pyenv install $python_latest
+  pyenv global $pythoon_latest
+  python -V
+  echo " ------------ END ------------"
+fi
+
+#
+# Install pyenv
+#
+if ! command_exists goenv ; then
+  echo " ----------- Java ------------"
+  brew install jenv
+  jenv --version
+  brew install --cask java
+  jenv add $(/usr/libexec/java_home)
+  java_latest=$(jenv versions | tail -1 | sed 's/ //g')
+  jenv global $java_latest
   echo " ------------ END ------------"
 fi
 
